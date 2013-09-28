@@ -5,6 +5,9 @@
 #F2EEE1 - Main background
 #685635 - Links
 #C2B293 - Search button background
+#7B2E32 - Dark red for active menu and headers
+#A89664 - Blocks and menu items border
+#EDE6D3 - Menu items background
 
 */
 
@@ -70,6 +73,35 @@ a:hover {
 
 #search-form #edit-submit {
   vertical-align: bottom;
+}
+
+/* =============
+     Main menu
+   ============= */
+
+#main-menu li {
+  padding: 0em;
+}
+
+#main-menu li a {
+  display: inline-block;
+  padding: 0.5em;
+  margin: 4px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid #A89664;
+  background-color: #EDE6D3;
+}
+
+#main-menu li a.active {
+  color: #7B2E32;
+  border: 1px solid #7B2E32;
+}
+
+#main-menu li a:hover {
+  color: gold;
+  text-decoration: none;
+  background-color: #7B2E32;
 }
 
 /* ==========
