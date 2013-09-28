@@ -83,10 +83,14 @@
         </a>
       <?php endif; ?>
 
-      <div id="header_nav">
+      <div id="header-nav">
       </div>
 
-      <?php print $search_form; ?>
+      <?php if ($search_form): ?>
+        <div id="search-form">
+          <?php print $search_form; ?>
+        </div>
+      <?php endif; ?>
 
     </div></div> <!-- /.section, /#header -->
 

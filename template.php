@@ -80,10 +80,10 @@ function istmat_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'search_block_form') {
     $form['search_block_form']['#size'] = 35;
-    $form['search_block_form']['#class'] = 'search-form';
     $form['search_block_form']['#attributes']['title'] = t('Введите ключевые слова для поиска');
     $form['actions']['submit'] = array('#type' => 'image_button', '#src' => drupal_get_path('theme', 'istmat').'/images/head_search.png');
 /*
+    $form['#attributes']['class'] = 'search-form';
     $form['search_block_form']['#title'] = t('Search'); // Change the text on the label element
     $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
     $form['search_block_form']['#attributes'] = array('placeholder' => t('Search'));
