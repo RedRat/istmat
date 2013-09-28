@@ -16,6 +16,6 @@ function istmat_form_system_theme_settings_alter(&$form, $form_state) {
     '#title'         => t('Add Respond.JS for IE8 and less.'),
     '#default_value' => theme_get_setting('istmat_respondjs'),
     '#description'   => t('This option let you add a <a href="!link">Respond</a> script to support Media-Queries in IE8 and less. WARNING! You MUST enable CSS aggregation for this option to work.', array('!link' => 'https://github.com/scottjehl/Respond')),
-#    '#disabled'      => !variable_get('preprocess_css', 0);
+    '#disabled'      => !variable_get('preprocess_css', 0),
   );
 }

@@ -1,0 +1,96 @@
+/* ==========
+     Header
+   ========== */
+
+#header {
+  height: 200px;
+  background-image: url(../images/head_bg.jpg);
+  background-position: right;
+}
+
+#header:before {
+  content: " ";
+  position: absolute;
+  width: 416px;
+  height: 200px;
+  background-image: url(../images/head_scroll.png);
+}
+
+#header #logo {
+  position: relative
+}
+
+/* ================
+     Content area
+   ================ */
+
+#main-wrapper {
+  width: 25%;
+}
+
+#main {
+  width: 300%;
+  margin-left: 100%;
+}
+
+#content {
+  float: left;
+  width: 99%;
+  margin-left: 1%;
+  margin-right: 33.333%;
+}
+
+#sidebar-first {
+  float: left;
+  width: 32.333%;
+  margin-left: -166.666%;
+/*  overflow: hidden;*/
+}
+
+/* ==========
+     Footer
+   ========== */
+
+#footer {
+  position: relative;
+  height: 160px;
+  background-image: url(../images/foot_bg.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+#footer:before {
+  content: " ";
+  position: absolute;
+  width: 50%;
+  height: 120px;
+  bottom: 0;
+  background-image: url(../images/foot_left.jpg);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+#footer:after {
+  content: " ";
+  position: absolute;
+  width: 50%;
+  height: 120px;
+  right: 0;
+  bottom: 0;
+#  z-index: -10;
+  background-image: url(../images/foot_right.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+#footer .section {
+  position: relative;
+  z-index: 10;
+  width: 680px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 120px 20px 0 20px;
+  background-image: url(../images/foot_center.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}

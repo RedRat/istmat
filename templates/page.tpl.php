@@ -83,7 +83,8 @@
         </a>
       <?php endif; ?>
 
-      <div id="header-nav">
+      <div id="header-links">
+        <?php print $header_links; ?>
       </div>
 
       <?php if ($search_form): ?>
@@ -130,7 +131,7 @@
 
     <div id="footer"><div class="section">
       Вся информация на сайте, если не указано другое, предоставляется на условиях лицензии
-      <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">CC BY-SA 3.0</a>.
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">Creative Commons BY-SA 3.0</a>.
     </div></div> <!-- /.section, /#footer -->
 
   </div></div> <!-- /#page, /#page-wrapper -->

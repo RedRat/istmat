@@ -1,3 +1,17 @@
+/*==========
+    Colors
+  ==========
+
+#F2EEE1 - Main background
+#685635 - Links
+#C2B293 - Search button background
+
+*/
+
+/*==========
+    Common
+  ==========*/
+
 body {
   background-color: #F2EEE1;
 }
@@ -5,4 +19,64 @@ body {
 #page {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+a {
+  color: #685635;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==========
+     Header
+   ========== */
+
+#header {
+  position: relative;
+}
+
+#header-links {
+  float: right;
+}
+
+#search-form {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+}
+
+#search-form #edit-search-block-form--2 {
+  border: none;
+/*  outline: none;*/
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+#search-form #edit-submit {
+  vertical-align: bottom;
+}
+
+/* ==========
+     Footer
+   ========== */
+
+#footer .section {
+  font-style: italic;
+  text-align: center;
 }

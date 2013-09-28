@@ -39,9 +39,9 @@ function istmat_preprocess_page(&$vars) {
   $block = module_invoke('search','block_view','search');
   $vars['search_form'] = render($block);
 
-//  $vars['logotype'] = file_create_url(drupal_get_path('theme', 'istmat').'/images/logotype.png');
-//  $vars['header_links'] = ($vars['logged_in']) ? '<a href="'.$vars['base_path'].'user/'.$vars['user']->uid.'">'.t('Profile').'</a> / <a href="'.$vars['base_path'].'user/logout">'.t('Logout').'</a>' : '<a href="'.$vars['base_path'].'user" rel="nofollow">'.t('Login').'</a> / <a href="'.$vars['base_path'].'user/register" rel="nofollow">'.t('Register').'</a>';
+  $vars['header_links'] = ($vars['logged_in']) ? '<a href="'.$vars['base_path'].'user/'.$vars['user']->uid.'">'.t('Profile').'</a> / <a href="'.$vars['base_path'].'user/logout">'.t('Logout').'</a>' : '<a href="'.$vars['base_path'].'user" rel="nofollow">'.t('Login').'</a> / <a href="'.$vars['base_path'].'user/register" rel="nofollow">'.t('Register').'</a>';
 //  $vars['header_icons'] = '<a href="'.$vars['base_path'].'rss.xml" title="Подписка на ленту новостей"></a><a href="'.$vars['base_path'].'#" title="Добавить сайт в закладки"></a><a href="'.$vars['base_path'].'#" title="Карта сайта"></a><a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"></a>';
+//  $vars['logotype'] = file_create_url(drupal_get_path('theme', 'istmat').'/images/logotype.png');
 
 //  dsm($vars);
 //  dsm($search_form);
@@ -82,8 +82,9 @@ function istmat_form_alter(&$form, &$form_state, $form_id) {
     $form['search_block_form']['#size'] = 35;
     $form['search_block_form']['#attributes']['title'] = t('Введите ключевые слова для поиска');
     $form['actions']['submit'] = array('#type' => 'image_button', '#src' => drupal_get_path('theme', 'istmat').'/images/head_search.png');
+    $form['actions']['submit']['#attributes']['title'] = t('Начать поиск!');
 /*
-    $form['#attributes']['class'] = 'search-form';
+    $form['#attributes']['class'][] = 'search-form';
     $form['search_block_form']['#title'] = t('Search'); // Change the text on the label element
     $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
     $form['search_block_form']['#attributes'] = array('placeholder' => t('Search'));
