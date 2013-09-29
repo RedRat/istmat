@@ -103,9 +103,9 @@ tbody {
 }
 
 #main-menu li a:hover {
-  color: gold;
+  color: #EDE6D3;
   text-decoration: none;
-  background-color: #7B2E32;
+  background-color: #685635;
 }
 
 /* ==========
@@ -144,4 +144,43 @@ tbody {
 
 .details .field-item+.field-item:before {
   content: ', ';
+}
+
+/***   Mini-panel   ***/
+
+#mini-panel-news {
+  background-color: #F9F8F4;
+/*  margin-top: 1em;*/
+  padding: 1em 1em 0 1em;
+}
+
+#mini-panel-news h2.pane-title {
+  margin-top: 0;
+  border-bottom: 1px dotted  #A89664;
+}
+
+/***   Side-bar   ***/
+
+#sidebar-first .block {
+  padding: 1em;
+/*  margin-top: 1em;*/
+  border: 1px solid #A89664;
+}
+
+#sidebar-first .block+.block {
+  margin-top: 1em;
+}
+
+#sidebar-first .block h2 {
+  margin-top: 0;
+  border-bottom: 1px dotted  #A89664;
+}
+
+#sidebar-first p.informer {
+  margin-bottom: 0;
+}
+
+#sidebar-first ul.menu {
+  padding-left: 1em;
+  margin: 0;
 }
