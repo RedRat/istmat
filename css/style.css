@@ -45,6 +45,10 @@ a:hover {
   text-decoration: underline;
 }
 
+tbody {
+  border-top: inherit;
+}
+
 /* ==========
      Header
    ========== */
@@ -111,4 +115,33 @@ a:hover {
 #footer .section {
   font-style: italic;
   text-align: center;
+}
+
+/***   Details fieldset   ***/
+
+.details .fieldset-wrapper {
+  display: table;
+  font-size: 0.875em;
+}
+
+.details .field{
+  display: table-row;
+}
+
+.details .field-label,
+.details .field-items {
+  display: table-cell;
+  float: none;
+}
+
+.details .field+.field .field-label {
+  padding-top: 0.286em;
+}
+
+.details .field-item {
+  display: inline;
+}
+
+.details .field-item+.field-item:before {
+  content: ', ';
 }
