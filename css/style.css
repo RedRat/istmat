@@ -89,7 +89,7 @@ tbody {
 
 #main-menu li a {
   display: inline-block;
-  padding: 0.5em;
+  padding: 8px;
   margin: 4px 0;
   font-weight: bold;
   text-transform: uppercase;
@@ -99,7 +99,8 @@ tbody {
 
 #main-menu li a.active {
   color: #7B2E32;
-  border: 1px solid #7B2E32;
+  padding: 7px;
+  border: 2px solid #7B2E32;
 }
 
 #main-menu li a:hover {

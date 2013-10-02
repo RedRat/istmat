@@ -20,6 +20,21 @@
   position: relative
 }
 
+#header-links {
+  height: 40px;
+  padding-left: 1em;
+  background-image: url(../images/head_links.png);
+}
+
+#header-links a {
+  line-height: 30px;
+}
+
+#header-links a img {
+  margin: 0 0.5em;
+  vertical-align: text-bottom;
+}
+
 /* ================
      Content area
    ================ */

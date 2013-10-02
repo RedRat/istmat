@@ -34,18 +34,20 @@ function istmat_preprocess_html(&$vars) {
 }*/
 
 function istmat_preprocess_page(&$vars) {
-//  $search_form = drupal_get_form('search_form');
-//  $vars['search_form'] = drupal_render($search_form);
   $block = module_invoke('search','block_view','search');
   $vars['search_form'] = render($block);
 
   $vars['header_links'] = ($vars['logged_in']) ? '<a href="'.$vars['base_path'].'user/'.$vars['user']->uid.'">'.t('Profile').'</a> / <a href="'.$vars['base_path'].'user/logout">'.t('Logout').'</a>' : '<a href="'.$vars['base_path'].'user" rel="nofollow">'.t('Login').'</a> / <a href="'.$vars['base_path'].'user/register" rel="nofollow">'.t('Register').'</a>';
+  $vars['header_links'] .= '<a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_mail.png" /></a>';
+  $vars['header_links'] .= '<a href="#" title="Добавить наш сайт в закладки"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_star.png" /></a>';
+  $vars['header_links'] .= '<a href="#" title="Посмотреть карту сайта"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_map.png" /></a>';
+  $vars['header_links'] .= '<a href="#" title="Подписка на ленту новостей"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_rss.png" /></a>';
+//  $vars['header_icons'] = '<a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"><img src="'.drupal_get_path('theme', 'istmat').'/images/head_mail.png'.'" alt="" /></a>';
+//  $vars['header_icons'] .= '<a href="'.$vars['base_path'].'rss.xml" title="Подписка на ленту новостей"><img src="'.drupal_get_path('theme', 'istmat').'/images/head_rss.png'.'" alt="" /></a>';
 //  $vars['header_icons'] = '<a href="'.$vars['base_path'].'rss.xml" title="Подписка на ленту новостей"></a><a href="'.$vars['base_path'].'#" title="Добавить сайт в закладки"></a><a href="'.$vars['base_path'].'#" title="Карта сайта"></a><a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"></a>';
 //  $vars['logotype'] = file_create_url(drupal_get_path('theme', 'istmat').'/images/logotype.png');
 
 //  dsm($vars);
-//  dsm($search_form);
-//  dsm($block);
   if (theme_get_setting('istmat_respondjs')) {
     drupal_add_js(
       drupal_get_path('theme', 'istmat').'/js/respond.min.js',
