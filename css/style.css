@@ -61,6 +61,14 @@ tbody {
   float: right;
 }
 
+#header-links a img {
+  vertical-align: text-bottom;
+}
+
+#header-links a.header-icon {
+  margin-left: 1em;
+}
+
 #search-form {
   position: absolute;
   right: 0;

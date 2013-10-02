@@ -38,10 +38,10 @@ function istmat_preprocess_page(&$vars) {
   $vars['search_form'] = render($block);
 
   $vars['header_links'] = ($vars['logged_in']) ? '<a href="'.$vars['base_path'].'user/'.$vars['user']->uid.'">'.t('Profile').'</a> / <a href="'.$vars['base_path'].'user/logout">'.t('Logout').'</a>' : '<a href="'.$vars['base_path'].'user" rel="nofollow">'.t('Login').'</a> / <a href="'.$vars['base_path'].'user/register" rel="nofollow">'.t('Register').'</a>';
-  $vars['header_links'] .= '<a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_mail.png" /></a>';
-  $vars['header_links'] .= '<a href="#" title="Добавить наш сайт в закладки"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_star.png" /></a>';
-  $vars['header_links'] .= '<a href="#" title="Посмотреть карту сайта"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_map.png" /></a>';
-  $vars['header_links'] .= '<a href="#" title="Подписка на ленту новостей"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_rss.png" /></a>';
+  $vars['header_links'] .= '<a class="header-icon" href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_mail.png" /></a>';
+  $vars['header_links'] .= '<a class="header-icon" href="#" title="Добавить наш сайт в закладки"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_star.png" /></a>';
+  $vars['header_links'] .= '<a class="header-icon" href="#" title="Посмотреть карту сайта"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_map.png" /></a>';
+  $vars['header_links'] .= '<a class="header-icon" href="#" title="Подписка на ленту новостей"><img src="'.drupal_get_path('theme', 'istmat').'/images/ico_rss.png" /></a>';
 //  $vars['header_icons'] = '<a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"><img src="'.drupal_get_path('theme', 'istmat').'/images/head_mail.png'.'" alt="" /></a>';
 //  $vars['header_icons'] .= '<a href="'.$vars['base_path'].'rss.xml" title="Подписка на ленту новостей"><img src="'.drupal_get_path('theme', 'istmat').'/images/head_rss.png'.'" alt="" /></a>';
 //  $vars['header_icons'] = '<a href="'.$vars['base_path'].'rss.xml" title="Подписка на ленту новостей"></a><a href="'.$vars['base_path'].'#" title="Добавить сайт в закладки"></a><a href="'.$vars['base_path'].'#" title="Карта сайта"></a><a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"></a>';
