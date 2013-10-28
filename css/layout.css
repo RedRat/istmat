@@ -30,6 +30,10 @@
   line-height: 30px;
 }
 
+#search-form {
+  right: 7px;
+}
+
 /* ================
      Content area
    ================ */
