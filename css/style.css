@@ -3,6 +3,7 @@
   ==========
 
 #F2EEE1 - Main background
+#F9F8F4 - News panel background
 #685635 - Links
 #C2B293 - Search button background
 #7B2E32 - Dark red for active menu and headers
@@ -122,7 +123,9 @@ tbody {
    ========== */
 
 #footer .section {
+  font-size: 75%;
   font-style: italic;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -191,6 +194,18 @@ tbody {
   margin: 0;
 }
 
+/***   Node links   ***/
+
+#block-system-main .node > ul.links.inline {
+  float: right;
+}
+
+/***   Node teaser   ***/
+
+#block-system-main .node-teaser {
+  border-bottom: 1px dotted #A89664;
+}
+
 /***   Sticky nodes   ***/
 
 #block-system-main .node-sticky {
@@ -216,15 +231,62 @@ tbody {
   width: 56px;
 }
 
-/***   Node links   ***/
+/***   Comments   ***/
 
-#block-system-main .node > ul.links.inline {
-  float: right;
-*  border-top: 1px dotted #A89664;*/
+.comment {
+  padding: 0.5em;
+  border-left: 1px dotted #A89664;
+  border-bottom: 1px dotted #A89664;
 }
 
-/***   Node teaser   ***/
+.comment .user-picture {
+  float: left;
+  padding-right: 1em;
+}
 
-#block-system-main .node-teaser {
-  border-bottom: 1px dotted #A89664;
+.comment .submitted .datetime:before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 4px;
+  background-image: url(../images/ico_comment.png);
+  background-position: -65px 0;
+}
+
+.comment .submitted a.username:before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 4px;
+  background-image: url(../images/ico_comment.png);
+  background-position: -52px 0;
+}
+
+.comment .links.inline {
+  float: right;
+  margin: 0;
+}
+
+.comment .links a:before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  background-image: url(../images/ico_comment.png);
+}
+
+.comment .links .comment-reply a:before {
+  background-position: -13px 0;
+}
+
+.comment .links .comment-edit a:before {
+  background-position: -26px 0;
+}
+
+.comment .links .comment-delete a:before {
+  background-position: -39px 0;
 }

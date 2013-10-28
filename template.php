@@ -61,6 +61,25 @@ function istmat_preprocess_page(&$vars) {
   }
 }
 
+function istmat_preprocess_comment(&$vars) {
+  $comment = $vars['elements']['#comment'];
+  $uri = entity_uri('comment', $comment);
+  $uri['options'] += array('attributes' => array('class' => 'permalink', 'rel' => 'bookmark'));
+
+  $vars['permalink'] = '('.l(t("link"), $uri['path'], $uri['options']).')';
+  $vars['created'] = format_date($comment->created, 'short');
+  if ($comment->changed == $comment->created) {
+    $vars['changed'] = $vars['created'];
+  }
+  else {
+    $vars['changed'] = format_date($comment->changed, 'short');
+  }
+  if ($comment->subject === substr($vars['comment_body']['0']['value'], 0, strlen($comment->subject)) || $comment->subject === t('(No subject)')) {
+    $vars['title'] = '';
+  }
+//  dsm($vars);
+}
+
 /*
 function istmat_field__field_area($vars) {
   dsm($vars);

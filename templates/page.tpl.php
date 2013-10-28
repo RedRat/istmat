@@ -130,7 +130,7 @@
     </div></div> <!-- /#main, /#main-wrapper -->
 
     <div id="footer"><div class="section">
-      Вся информация на сайте, если не указано другое, предоставляется на условиях лицензии
+      Вся информация на сайте, если не указано другое,<br />предоставляется на условиях лицензии
       <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">Creative Commons BY-SA 3.0</a>.
     </div></div> <!-- /.section, /#footer -->
 
