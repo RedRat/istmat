@@ -196,7 +196,7 @@ tbody {
 
 /***   Node links   ***/
 
-#block-system-main .node > ul.links.inline {
+#block-system-main .node-teaser > ul.links.inline {
   float: right;
 }
 
@@ -237,11 +237,14 @@ tbody {
   padding: 0.5em;
   border-left: 1px dotted #A89664;
   border-bottom: 1px dotted #A89664;
+  -webkit-border-radius: 0 0 0 10px;
+  -moz-border-radius: 0 0 0 10px;
+  border-radius: 0 0 0 10px;
 }
 
 .comment .user-picture {
-  float: left;
-  padding-right: 1em;
+  float: right;
+  padding-left: 1em;
 }
 
 .comment .submitted .datetime:before {
@@ -267,6 +270,10 @@ tbody {
 .comment .links.inline {
   float: right;
   margin: 0;
+}
+
+.comment .links.inline .last{
+ padding-right: 0;
 }
 
 .comment .links a:before {
