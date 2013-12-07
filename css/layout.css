@@ -34,6 +34,28 @@
   right: 7px;
 }
 
+/* =============
+     Main menu
+   ============= */
+
+#main-menu {
+  display: table;
+  width: 100%;
+  margin: 0;
+}
+
+#main-menu li {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#main-menu li a {
+  display: block;
+  border: none;
+  margin: 0;
+}
+
 /* ================
      Content area
    ================ */

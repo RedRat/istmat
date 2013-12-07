@@ -106,16 +106,14 @@ tbody {
   background-color: #EDE6D3;
 }
 
-#main-menu li a.active {
-  color: #7B2E32;
-  padding: 7px;
-  border: 2px solid #7B2E32;
-}
-
 #main-menu li a:hover {
   color: #EDE6D3;
   text-decoration: none;
   background-color: #685635;
+}
+
+#main-menu li a.active {
+  color: #7B2E32;
 }
 
 /* ==========
@@ -276,7 +274,10 @@ tbody {
  padding-right: 0;
 }
 
-.comment .links a:before {
+.comment .links .quote a:before,
+.comment .links .comment-edit a:before,
+.comment .links .comment-reply a:before,
+.comment .links .comment-delete a:before {
   content: "";
   width: 13px;
   height: 13px;

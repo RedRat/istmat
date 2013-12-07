@@ -131,7 +131,7 @@
 
     <div id="footer"><div class="section">
       Вся информация на сайте, если не указано другое,<br />предоставляется на условиях лицензии
-      <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">Creative Commons BY-SA 3.0</a>.
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.ru">Creative Commons BY-SA 4.0</a>.
     </div></div> <!-- /.section, /#footer -->
 
   </div></div> <!-- /#page, /#page-wrapper -->
