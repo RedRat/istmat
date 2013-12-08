@@ -229,9 +229,69 @@ tbody {
   width: 56px;
 }
 
-/***   Comments   ***/
+/***   Forum and Comments   ***/
 
-.comment {
+.forum-table-superheader {
+  border: 1px solid #A89664;
+  background-color: #EDE6D3;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+
+table.forum-table {
+  border-spacing: 0 2px;
+  border-collapse: inherit
+}
+
+table.forum-table th {
+  border: inherit;
+}
+
+th.forum-last-post {
+  width: 30%;
+}
+
+table.forum-table td {
+  background-color: #F9F8F4;
+}
+
+#forum-statistics {
+  background-color: #F9F8F4;
+  border: 1px solid #A89664;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+#forum-statistics-header {
+  background-color: #EDE6D3;
+}
+
+#forum-statistics-active-header,
+#forum-statistics-statistics-header {
+  background-color: #F2EEE1;
+}
+
+#forum-statistics-active-body,
+#forum-statistics-statistics-body {
+  padding-bottom: 0.3em;
+}
+
+.forum-node-create-links-top {
+  display: none;
+}
+
+.forum-node-create-links {
+  width: inherit;
+}
+
+#forum-sort {
+  margin-top: 10px;
+}
+
+.comment,
+#forum-comments .forum-post {
   padding: 0.5em;
   border-left: 1px dotted #A89664;
   border-bottom: 1px dotted #A89664;
@@ -277,7 +337,11 @@ tbody {
 .comment .links .quote a:before,
 .comment .links .comment-edit a:before,
 .comment .links .comment-reply a:before,
-.comment .links .comment-delete a:before {
+.comment .links .comment-delete a:before,
+.forum-post-links .links .quote a:before,
+.forum-post-links .links .comment-edit a:before,
+.forum-post-links .links .comment-reply a:before,
+.forum-post-links .links .comment-delete a:before {
   content: "";
   width: 13px;
   height: 13px;
@@ -287,14 +351,17 @@ tbody {
   background-image: url(../images/ico_comment.png);
 }
 
-.comment .links .comment-reply a:before {
+.comment .links .comment-reply a:before,
+.forum-post-links .links .comment-reply a:before {
   background-position: -13px 0;
 }
 
-.comment .links .comment-edit a:before {
+.comment .links .comment-edit a:before,
+.forum-post-links .links .comment-edit a:before {
   background-position: -26px 0;
 }
 
-.comment .links .comment-delete a:before {
+.comment .links .comment-delete a:before,
+.forum-post-links .links .comment-delete a:before {
   background-position: -39px 0;
 }
