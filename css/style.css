@@ -70,13 +70,13 @@ tbody {
   margin-left: 1em;
 }
 
-#search-form {
+#header #search-form {
   position: absolute;
   right: 0;
   bottom: 8px;
 }
 
-#search-form #edit-search-block-form--2 {
+#header #search-form #edit-search-block-form--2 {
   border: none;
 /*  outline: none;*/
   -webkit-border-radius: 10px 0 0 10px;
@@ -84,7 +84,7 @@ tbody {
   border-radius: 10px 0 0 10px;
 }
 
-#search-form #edit-submit {
+#header #search-form #edit-submit {
   vertical-align: bottom;
 }
 
@@ -290,6 +290,18 @@ table.forum-table td {
   margin-top: 10px;
 }
 
+.forum-post-info {
+  background-color: #EDE6D3;
+}
+
+.forum-post-wrapper {
+  background-color: #EDE6D3;
+}
+
+.forum-post-panel-main {
+  background-color: #F2EEE1;
+}
+
 .comment,
 #forum-comments .forum-post {
   padding: 0.5em;
@@ -327,9 +339,20 @@ table.forum-table td {
 
 .comment .links.inline {
   float: right;
-  margin: 0;
 }
 
+.comment .links.inline,
+div.forum-post,
+.forum-jump-links,
+.forum-post-links {
+  margin: 0;
+}
+/*
+.forum-jump-links,
+.forum-post-links {
+  line-height: 1.5em;
+}
+*/
 .comment .links.inline .last{
  padding-right: 0;
 }
@@ -338,6 +361,9 @@ table.forum-table td {
 .comment .links .comment-edit a:before,
 .comment .links .comment-reply a:before,
 .comment .links .comment-delete a:before,
+.forum-post-links .links .post-edit a:before,
+.forum-post-links .links .post-delete a:before,
+.forum-post-links .links .comment-add a:before,
 .forum-post-links .links .quote a:before,
 .forum-post-links .links .comment-edit a:before,
 .forum-post-links .links .comment-reply a:before,
@@ -352,16 +378,45 @@ table.forum-table td {
 }
 
 .comment .links .comment-reply a:before,
+.forum-post-links .links .comment-add a:before,
 .forum-post-links .links .comment-reply a:before {
   background-position: -13px 0;
 }
 
 .comment .links .comment-edit a:before,
+.forum-post-links .links .post-edit a:before,
 .forum-post-links .links .comment-edit a:before {
   background-position: -26px 0;
 }
 
 .comment .links .comment-delete a:before,
+.forum-post-links .links .post-delete a:before,
 .forum-post-links .links .comment-delete a:before {
   background-position: -39px 0;
+}
+
+/***   Pager   ***/
+
+.item-list .pager {
+  margin: 0.5em 0;
+}
+
+.item-list .pager li {
+  margin: 0 0em;
+  display: inline-block;
+}
+
+.item-list .pager li a {
+  border: 1px solid #A89664;
+  background-color: #EDE6D3;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+}
+
+.item-list .pager li.pager-current {
+  border: 1px solid #7B2E32;
+  background-color: #EDE6D3;
+  padding: 0.25em 0.5em;
+  color: #7B2E32;
+  margin: 0 0.25em;
 }
