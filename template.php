@@ -47,7 +47,7 @@ function istmat_preprocess_page(&$vars) {
 //  $vars['header_icons'] = '<a href="'.$vars['base_path'].'rss.xml" title="Подписка на ленту новостей"></a><a href="'.$vars['base_path'].'#" title="Добавить сайт в закладки"></a><a href="'.$vars['base_path'].'#" title="Карта сайта"></a><a href="mailto://'.variable_get('site_mail', ini_get('sendmail_from')).'" title="Отправить нам письмо"></a>';
 //  $vars['logotype'] = file_create_url(drupal_get_path('theme', 'istmat').'/images/logotype.png');
 
-//  dsm($vars);
+//  dpm($vars);
   if (theme_get_setting('istmat_respondjs')) {
     drupal_add_js(
       drupal_get_path('theme', 'istmat').'/js/respond.min.js',
@@ -113,5 +113,16 @@ function istmat_form_alter(&$form, &$form_state, $form_id) {
     $form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/searchbutton.png');
 */
   }
-//  dsm($form);
+
+  if (in_array($form_id, array('publication_node_form', 'document_node_form'))) {
+    $form['title']['#size'] = 100;
+    $form['field_source']['und']['0']['value']['#size'] = 100;
+  }
+
+  if ($form_id == 'document_node_form') {
+    $form['field_archive']['und']['0']['value']['#size'] = 100;
+  }
+
+//  dpm($form_id);
+//  dpm($form);
 }
