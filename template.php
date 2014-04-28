@@ -74,7 +74,15 @@ function istmat_preprocess_comment(&$vars) {
   else {
     $vars['changed'] = format_date($comment->changed, 'short');
   }
-  if ($comment->subject === substr($vars['comment_body']['0']['value'], 0, strlen($comment->subject)) || $comment->subject === t('(No subject)')) {
+
+  $comment_body = $vars['comment_body']['0'];
+  if (isset($comment_body['format'])) {
+    $comment_text = check_markup($comment_body['value'], $comment_body['format']);
+  }
+  else {
+    $comment_text = check_plain($comment_body['value']);
+  }
+  if ($comment->subject === substr(trim(decode_entities(strip_tags($comment_text))), 0, strlen($comment->subject)) || $comment->subject === t('(No subject)')) {
     $vars['title'] = '';
   }
 //  dsm($vars);
